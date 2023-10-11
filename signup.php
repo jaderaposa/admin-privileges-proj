@@ -33,7 +33,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 50px;
   padding-top: 60px;
   align-items: center;
@@ -101,7 +101,7 @@
                     </button>
                 </div>
 
-                <div class="text-center p-t-136">
+                <div class="text-center p-t-136" style="padding-top: 3rem;">
                     <a class="txt2" href="index.php">
                         Back to Login
                         <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
