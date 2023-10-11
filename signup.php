@@ -21,6 +21,26 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">  <!-- You can add this line for your custom CSS -->
     <!-- =============================================================================================== -->
 </head>
+<style>
+.wrap-login100 {
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 50px;
+  padding-top: 60px;
+  align-items: center;
+}
+</style>
+
+
 <body>
 
 <div class="limiter">
@@ -82,7 +102,7 @@
                 </div>
 
                 <div class="text-center p-t-136">
-                    <a class="txt2" href="login.php">
+                    <a class="txt2" href="index.php">
                         Back to Login
                         <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
                     </a>
