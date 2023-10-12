@@ -2,23 +2,65 @@
 <html lang="en">
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" href="css/yep.css">
+    <!-- =============================================================================================== -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!-- =============================================================================================== -->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">  <!-- You can add this line for your custom CSS -->
+    <!-- =============================================================================================== -->
 </head>
 <body>
 
-<div class="welcome-message yep">
-    <?php
-    session_start();
-    if (isset($_SESSION['username']) && isset($_SESSION['role'])) {
-        $username = $_SESSION['username'];
-        $role = $_SESSION['role'];
-        echo "Welcome, $username! You are logged in as a $role.";
-    } else {
-        // Handle the case where the session data is not set.
-        echo "Session data not found. Please log in first.";
-    }
-    ?>
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-pic js-tilt" data-tilt>
+                <img src="images/img-01.png" alt="IMG">
+            </div>
+
+            <div class="welcome-message yep">
+                <?php
+                session_start();
+                if (isset($_SESSION['username']) && isset($_SESSION['role'])) {
+                    $username = $_SESSION['username'];
+                    $role = $_SESSION['role'];
+                    echo "Welcome, <b>$username</b>! You are logged in as a $role.";
+                } else {
+                    // Handle the case where the session data is not set.
+                    echo "Session data not found. Please log in first.";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- =============================================================================================== -->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!-- =============================================================================================== -->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- =============================================================================================== -->
+<script src="vendor/select2/select2.min.js"></script>
+<!-- =============================================================================================== -->
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+</script>
+<!-- =============================================================================================== -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
