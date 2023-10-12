@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <!-- =============================================================================================== -->
     <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">  <!-- You can add this line for your custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- =============================================================================================== -->
 </head>
 <body>
@@ -29,21 +29,37 @@
             </div>
 
             <div class="welcome-message yep">
-                <?php
+            <?php
                 session_start();
                 if (isset($_SESSION['username']) && isset($_SESSION['role'])) {
                     $username = $_SESSION['username'];
                     $role = $_SESSION['role'];
                     echo "Welcome, <b>$username</b>! You are logged in as a $role.";
+
                 } else {
                     // Handle the case where the session data is not set.
                     echo "Session data not found. Please log in first.";
                 }
                 ?>
             </div>
+            <div class="container">
+                <a href="functions/logout.php">
+                    <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Log Out
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+</style>
 
 <!-- =============================================================================================== -->
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>

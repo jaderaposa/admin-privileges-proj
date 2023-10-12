@@ -86,8 +86,8 @@
                         <i class="fa fa-lock" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Confirm Password is required" style="text-align: center;margin-top:2rem;">
-                    <label for="role"><h5 style="font-family: Poppins-Bold;font-size: 24px;color: #333333;line-height: 1.2;text-align: center;margin-bottom:1rem">Role</h5></label>
+                <div class="wrap-input100 validate-input" data-validate="Confirm Password is required" style="text-align: center;margin-top:2rem;margin-bottom:3rem">
+                    <label for="role"><h5 style="font-family: Poppins-Bold;font-size: 24px;color: #333333;line-height: 1.2;text-align: center;margin-bottom:0.5rem">Role</h5></label>
                     <div style="display:flex; gap: 10px;justify-content:center;">
                         <input type="radio" name="role" value="user" checked>User
                         <input type="radio" name="role" value="admin">Admin
@@ -103,8 +103,7 @@
 
                 <div class="text-center p-t-136" style="padding-top: 3rem;">
                     <a class="txt2" href="index.php">
-                        Back to Login
-                        <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+                        <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Back to Login
                     </a>
                 </div>
             </form>
