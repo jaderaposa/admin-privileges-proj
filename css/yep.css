@@ -1,17 +1,11 @@
 .yep {
-    justify-content: center;
-    display: flex;
-    padding: 18rem;
-    width: 50rem;
-    border: 2px solid black;
-    border-radius: 1rem;
+    width: 100%;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: 45px;
     text-align: center;
-    font-family: Poppins-Bold;
 }
 
 .log-out-button {
@@ -19,3 +13,19 @@
     bottom: 10px;
     right: 10px;
 }
+
+table {
+    display: inline;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.space {
+    padding: 2%;
+}
+  
