@@ -28,4 +28,12 @@ th, td {
 .space {
     padding: 2%;
 }
+
+.eye {
+    /* display: flex; */
+    justify-content: space-between;
+    padding-right: 35px;
+}
+
+
   

@@ -90,8 +90,8 @@
                     <label for="role"><h5 style="font-family: Poppins-Bold;font-size: 24px;color: #333333;line-height: 1.2;text-align: center;margin-bottom:0.5rem">Role</h5></label>
                     <div style="display:flex; gap: 10px;justify-content:center;">
                         <input type="radio" name="role" value="user" checked>User
-                        <input type="radio" name="role" value="admin">Admin
                         <input type="radio" name="role" value="staff">Staff
+                        <input type="radio" name="role" value="admin">Admin
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="text-center p-t-136" style="padding-top: 3rem;">
-                    <a class="txt2" href="index.php">
+                    <a class="txt2" href="login.php">
                         <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Back to Login
                     </a>
                 </div>

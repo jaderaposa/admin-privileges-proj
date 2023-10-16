@@ -33,9 +33,9 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                         $username = $_SESSION['username'];
                         $role = $_SESSION['role'];
                         echo "Welcome, <b>$username</b>! You are logged in as a $role.<br>";
-                    } else {
-                        // Handle the case where the session data is not set.
-                        echo "Session data not found. Please log in first.";
+                    // } else {
+                    //     // Handle the case where the session data is not set.
+                    //     echo "Session data not found. Please log in first.";
                     }
                     ?>
 
@@ -44,52 +44,54 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
 
                     <div>
                         <?php
-                        if ($role === 'admin') {
-                            echo '<table>';
-                            echo '
-                        <tr>
-                            <th>Staffs</th>
-                        </tr>';
-                            echo '
-                        <tr>
-                            <td>Maam Janine</td>
-                        </tr>
-                        <tr>
-                            <td>Maam Shaira</td>
-                        </tr>
-                        <tr>
-                            <td>Sir Reilan</td>
-                        </tr>
-                        ';
-                            echo '</table>';
-                        }
+                        if (isset($_SESSION['username']) && isset($_SESSION['role'])) {
+                            $role = $_SESSION['role'];
 
-                        if ($role === 'admin' || $role === 'staff') {
-                            echo '<table>';
-                            echo '
-                        <tr>
-                            <th>User</th>
-                        </tr>
-                        ';
-                            echo '
-                        <tr>
-                            <td>Jade Raposa</td>
-                        </tr>
-                        <tr>
-                            <td>Glaiza Millete</td>
-                        </tr>
-                        <tr>
-                            <td>Richy Rich</td>
-                        </tr>
-                        ';
-                            echo '</table>';
-                        }
-
-                        if ($role === 'user') {
-                            echo '<p>You cannot use this because you are a student</p>';
+                            if ($role === 'admin') {
+                                echo '<table>';
+                                echo '
+                                    <tr>
+                                        <th>Staffs</th>
+                                    </tr>';
+                                echo '
+                                    <tr>
+                                        <td>Maam Janine</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maam Shaira</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sir Reilan</td>
+                                    </tr>
+                                    ';
+                                echo '</table>';
+                            } if ($role === 'admin' || $role === 'staff') {
+                                echo '<table>';
+                                echo '
+                                    <tr>
+                                        <th>User</th>
+                                    </tr>';
+                                echo '
+                                    <tr>
+                                        <td>Jade Raposa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Glaiza Millete</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Richy Rich</td>
+                                    </tr>
+                                    ';
+                                echo '</table>';
+                            } if ($role === 'user') {
+                                echo '<p>You cannot use this because you are a student</p>';
+                            }
+                        } else {
+                            echo "Session data not found. Please log in first.";
                         }
                         ?>
                     </div>
+
                 </div>
 
                 <div class="container">
