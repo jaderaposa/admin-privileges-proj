@@ -46,31 +46,57 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                         // Handle the case where the session data is not set.
                         echo "Session data not found. Please log in first.";
                     }
+
                     if ($role === 'admin') {
-                        echo '<br><table>';
-                        echo '<tr><th>Admin Table 1</th></tr>';
-                        // Add table content here for the first admin table
-                        echo '<tr><td>Admin Table 1 Data</td></tr>';
+                        echo '<table>';
+                        echo 
+                        '
+                        <tr>
+                            <th>Staffs</th>
+                        </tr>';
+                        // Add table content here for the staff table
+                        echo 
+                        '<tr>
+                            <td>Maam Janine</td>
+                        </tr>
+                        <tr>
+                            <td>Maam Shaira</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Reilan</td>
+                        </tr>
+                        '
+                        ;
                         // Repeat for additional rows
                         echo '</table>';
-
-                        echo '<table>';
                     }
 
                     if ($role === 'admin' || $role === 'staff') {
                         echo '<table>';
-                        echo '<tr><th>Staff Table</th></tr>';
-                        // Add table content here for the staff table
-                        echo '<tr><td>Staff Table Data</td></tr>';
+                        echo '
+                        <tr>
+                            <th>User</th>
+                        </tr>
+                        ';
+                        // Add table content here for the user table
+                        echo '
+                        <tr>
+                            <td>Jade Raposa</td>
+                        </tr>
+                        <tr>
+                            <td>Glaiza Millete</td>
+                        </tr>
+                        <tr>
+                            <td>Richy Rich</td>
+                        </tr>
+                        ';
                         // Repeat for additional rows
                         echo '</table>';
                     }
 
-                    if ($role === 'admin' || $role === 'staff' || $role === 'user') {
+                    if ($role === 'user') {
                         echo '<table>';
-                        echo '<tr><th>User Table</th></tr>';
-                        // Add table content here for the user table
-                        echo '<tr><td>User Table Data</td></tr>';
+                        echo '<p>You cannot use this because you are a student</p>';
                         // Repeat for additional rows
                         echo '</table>';
                     }
