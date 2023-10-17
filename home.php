@@ -17,12 +17,11 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
 
     <div class="limiter">
         <div class="container-login100" style="
-    height: fit-content;
     align-items: center;
     display: flex;
     justify-content: center;
 ">
-            <div class="wrap-login100">
+            <div class="">
                 <!-- <div class="login100-pic js-tilt" data-tilt>
                     <img src="images/img-01.png" alt="IMG">
                 </div> -->
@@ -33,9 +32,9 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                         $username = $_SESSION['username'];
                         $role = $_SESSION['role'];
                         echo "Welcome, <b>$username</b>! You are logged in as a $role.<br>";
-                    // } else {
-                    //     // Handle the case where the session data is not set.
-                    //     echo "Session data not found. Please log in first.";
+                        // } else {
+                        //     // Handle the case where the session data is not set.
+                        //     echo "Session data not found. Please log in first.";
                     }
                     ?>
 
@@ -65,7 +64,8 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                                     </tr>
                                     ';
                                 echo '</table>';
-                            } if ($role === 'admin' || $role === 'staff') {
+                            }
+                            if ($role === 'admin' || $role === 'staff') {
                                 echo '<table>';
                                 echo '
                                     <tr>
@@ -83,8 +83,9 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                                     </tr>
                                     ';
                                 echo '</table>';
-                            } if ($role === 'user') {
-                                echo '<p>You cannot use this because you are a student</p>';
+                            }
+                            if ($role === 'user') {
+                                echo '<span>You cannot use this because you are a student</span>';
                             }
                         } else {
                             echo "Session data not found. Please log in first.";
@@ -95,7 +96,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                 </div>
 
                 <div class="container">
-                    <a href="functions/logout.php">
+                    <a href="functions/logout.php" style="text-decoration: none; color:black;">
                         <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>Log Out
                     </a>
                 </div>
@@ -105,13 +106,21 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
 
     <style>
         .container {
-            position: absolute;
+            position: fixed;
             display: flex;
             justify-content: end;
-            top: 0;
+            bottom: 0;
             right: 0;
             margin-right: 1rem;
-            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        span{
+            font-size:2rem;
+        }
+
+        td {
+            text-align: left;
         }
     </style>
 

@@ -29,19 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start(); // Start a session
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['role'] = $table; // The table name might be the role
+                $_SESSION['email_or_username'] = $email_or_username; // Store the entered email or username in the session
 
                 // Redirect to the welcome page
                 header("Location: ../home.php");
                 exit();
             } else {
-                // Display an alert for invalid password
-                echo "<script>alert('Invalid password.');</script>";
+                // Store the previously entered value in a session variable
+                $_SESSION['previous_input'] = $email_or_username;
                 // Redirect back to the login page
-                echo "<script>window.location.href = '../login.php';</script>";
-                // Set the value of the username input field back to the entered value
-                echo "<script>document.querySelector('[name=\"email_or_username\"]').value = '$email_or_username';</script>";
-
+                header("Location: ../login.php?invalid_password=true");
                 exit();
+
             }
         }
     }
@@ -52,8 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('User not found.');</script>";
         // Redirect back to the login page
         echo "<script>window.location.href = '../login.php';</script>";
-        // Set the value of the username input field back to the entered value
-        echo "<script>document.querySelector('[name=\"email_or_username\"]').value = '$email_or_username';</script>";
         exit();
     }
 

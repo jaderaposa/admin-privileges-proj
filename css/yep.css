@@ -29,10 +29,31 @@ th, td {
     padding: 2%;
 }
 
-.eye {
-    /* display: flex; */
-    justify-content: space-between;
-    padding-right: 35px;
+.eye-icon {
+    /* position: relative;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); */
+    cursor: pointer;
+}
+
+.limiter {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrap-login100 {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.login100-form {
+    text-align: center;
+    display: grid;
 }
 
 
