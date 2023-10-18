@@ -1,3 +1,16 @@
+body{
+    background-image: linear-gradient(95deg ,rgb(62, 62, 158), rgb(126, 39, 188), rgb(100, 172, 196));
+  }
+
+/* div .limiter{
+    filter: blur(5px);
+}   */
+
+.wrap-login100{
+    background-color: rgb(113, 122, 207);
+    width: 500px;
+}
+
 .yep {
     width: 100%;
     transform: translate(-50%, -50%);
@@ -19,6 +32,18 @@ table {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
   }
+th{
+    background-color: rgb(101, 83, 221);
+    color: white;
+}
+td{
+    background-color:rgb(71, 56, 174) ;
+    color: white;
+}
+
+b{
+    color: rgb(195, 173, 251);
+}
   
 th, td {
     border: 1px solid black;
@@ -49,6 +74,7 @@ th, td {
     border: 2px solid black;
     border-radius: 10px;
     padding: 1rem;
+    width: 500px;
 }
 
 .login100-form {
