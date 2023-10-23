@@ -11,10 +11,47 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        .limiter {
+            height: 100vh;
+        }
+
+        .eye-icon {
+            /* position: absolute; */
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .eye-icon i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eye-icon:before {
+            content: '';
+            /* position: absolute; */
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            z-index: 1;
+        }
+
+        .eye-icon input[type="password"] {
+            padding-right: 30px;
+        }
+
+        .eye-icon input[type="password"]:focus {
+            padding-right: 30px;
+        }
+    </style>
 </head>
 
 <body>
-<?php
+    <?php
     // Check if there is a message to display
     if (isset($_GET['account_locked'])) {
         echo "<script>alert('Your account has been locked. Please contact support.');</script>";
@@ -40,7 +77,7 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
                     <input class="input100" type="password" name="pass" id="password" placeholder="Password">
-                    <span toggle="#password" class="eye-icon field-icon toggle-password">
+                    <span class="eye-icon toggle-password">
                         <i class="fa fa-eye"></i>
                     </span>
                 </div>
@@ -60,12 +97,6 @@
             </form>
         </div>
     </div>
-
-    <style>
-        .limiter {
-            height: 100vh;
-        }
-    </style>
 
     <script>
         // Check if the URL has a query parameter for an invalid password
@@ -94,9 +125,6 @@
             togglePassword.querySelector('i').classList.toggle('fa-eye-slash');
         });
     </script>
-
-
-
 </body>
 
 </html>
