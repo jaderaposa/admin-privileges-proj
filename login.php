@@ -14,7 +14,14 @@
 </head>
 
 <body>
-
+<?php
+    // Check if there is a message to display
+    if (isset($_GET['account_locked'])) {
+        echo "<script>alert('Your account has been locked. Please contact support.');</script>";
+    } else if (isset($_GET['invalid_password'])) {
+        // echo "<script>alert('Invalid email/username or password.');</script>";
+    }
+    ?>
     <div class="limiter">
         <div class="wrap-login100">
 

@@ -22,6 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $userFound = true; // Set the flag to true
             $row = $result->fetch_assoc();
             $hashedPassword = $row['password'];
+            $loginAttempts = $row['login_attempts'];
+            $accountLocked = $row['account_locked'];
+
+            // Check if the account is locked
+            if ($accountLocked) {
+                // Redirect back to the login page with a message
+                header("Location: ../login.php?account_locked=true");
+                exit();
+            }
 
             // Verify the entered password
             if (password_verify($password, $hashedPassword)) {
@@ -31,16 +40,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['role'] = $table; // The table name might be the role
                 $_SESSION['email_or_username'] = $email_or_username; // Store the entered email or username in the session
 
+                // Reset the login attempts
+                $sql = "UPDATE $table SET login_attempts = 0 WHERE email = ? OR username = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("ss", $email_or_username, $email_or_username);
+                $stmt->execute();
+
                 // Redirect to the welcome page
                 header("Location: ../home.php");
                 exit();
             } else {
+                // Increment the login attempts
+                $loginAttempts++;
+                $sql = "UPDATE $table SET login_attempts = ? WHERE email = ? OR username = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("iss", $loginAttempts, $email_or_username, $email_or_username);
+                $stmt->execute();
+
+                // Check if the account should be locked
+                if ($loginAttempts >= 3) {
+                    $sql = "UPDATE $table SET account_locked = 1 WHERE email = ? OR username = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("ss", $email_or_username, $email_or_username);
+                    $stmt->execute();
+
+                    // Redirect back to the login page with a message
+                    header("Location: ../login.php?account_locked=true");
+                    exit();
+                }
+
                 // Store the previously entered value in a session variable
                 $_SESSION['previous_input'] = $email_or_username;
-                // Redirect back to the login page
+                // Redirect back to the login page with a message
                 header("Location: ../login.php?invalid_password=true");
                 exit();
-
             }
         }
     }
@@ -49,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$userFound) {
         // Display an alert for user not found
         echo "<script>alert('User not found.');</script>";
-        // Redirect back to the login page
+        // Redirect back to the login page with a message
         echo "<script>window.location.href = '../login.php';</script>";
         exit();
     }
