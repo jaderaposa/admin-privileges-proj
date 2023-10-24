@@ -98,10 +98,15 @@ input[type=password] {
    font-size: xx-large;
  }
 
- .txt2 {
+ .txt2 .login100-form-btn .sus{
     font-family: 'PrataRegular';
     font-weight: normal;
     font-style: normal;
+ }
+
+ .inputtext{
+    text-align: left;
+    margin-left: 15%;
  }
 
 .wrap-login100 {

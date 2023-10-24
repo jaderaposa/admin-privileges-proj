@@ -11,6 +11,8 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
     <!-- =============================================================================================== -->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
     <link rel="stylesheet" href="css/yep.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/prata-regular" type="text/css"/>
+
 </head>
 
 <body>
@@ -96,7 +98,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user';
                 </div>
 
                 <div class="container">
-                    <a href="functions/logout.php" style="text-decoration: none; color:black;">
+                    <a class="sus" href="functions/logout.php" style="text-decoration: none; color:black; font-size:x-large;">
                         <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>Log Out
                     </a>
                 </div>

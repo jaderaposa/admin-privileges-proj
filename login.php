@@ -85,13 +85,13 @@
                 </div>
 
                 <div class="container-login100-form-btn" style="padding-top: 1rem;">
-                    <button class="login100-form-btn" type="submit">
+                    <button class="login100-form-btn" type="submit" style="font-size: large; background-color: #30398b; color:white;">
                         Login
                     </button>
                 </div>
 
                 <div class="text-center" style="margin-top: 2rem;">
-                    <a class="txt2" href="signup.php" style="text-decoration: none; color:black">
+                    <a class="txt2" href="signup.php" style="text-decoration: none; color:black; font-size:large;">
                         Create your Account
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>

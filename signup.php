@@ -11,6 +11,8 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bebas-neue" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/prata-regular" type="text/css"/>
+
     <!-- =============================================================================================== -->
 </head>
 
@@ -25,42 +27,44 @@
                     <span class="login100-form-title" style="padding-bottom: 1rem;">
                         Register Account
                     </span>
+                     
+                    <div class="inputtext">
+                        <div class="wrap-input100 validate-input" data-validate="Valid username is required" style="margin-bottom:0.5rem;">
+                            <input class="input100" type="text" name="username" placeholder="Username" required>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100" style="font-size: x-large;">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                        </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid username is required" style="margin-bottom:0.5rem;">
-                        <input class="input100" type="text" name="username" placeholder="Username" required>
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100" style="font-size: x-large;">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                    </div>
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz" style="margin-bottom:0.5rem;">
+                            <input class="input100" type="email" name="email" placeholder="Email" required>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100" style="font-size: x-large;">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz" style="margin-bottom:0.5rem;">
-                        <input class="input100" type="email" name="email" placeholder="Email" required>
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100" style="font-size: x-large;">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
+                        <div class="wrap-input100 validate-input" data-validate="Password is required" style="margin-bottom:0.5rem;">
+                            <input class="input100" type="password" name="password" id="password" placeholder="Password" required>
+                            <span toggle="#password" class="eye-icon field-icon toggle-password" style="font-size: x-large;">
+                                <i class="fa fa-eye"></i>
+                            </span>
+                        </div>
+                    
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required" style="margin-bottom:0.5rem;">
-                        <input class="input100" type="password" name="password" id="password" placeholder="Password" required>
-                        <span toggle="#password" class="eye-icon field-icon toggle-password" style="font-size: x-large;">
-                            <i class="fa fa-eye"></i>
-                        </span>
-                    </div>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Confirm Password is required">
-                        <input class="input100" type="password" name="confirm_password" placeholder="Confirm Password" required>
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100" style="font-size: x-large;">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
+                        <div class="wrap-input100 validate-input" data-validate="Confirm Password is required">
+                            <input class="input100" type="password" name="confirm_password" placeholder="Confirm Password" required>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100" style="font-size: x-large;">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Confirm Password is required" style="padding-top: 1rem;">
-                        <label for="role"><span style="font-size: larger;">Role</span></label>
-                        <div style="display:flex; gap: 5px;justify-content:center;margin-top:0.5rem;margin-bottom:0.5rem;">
+                        <label for="role"><span style="font-size:x-large;">Role</span></label>
+                        <div style="display:flex; gap: 5px;justify-content:center;margin-top:0.5rem;margin-bottom:0.5rem; font-size:large;">
                             <input type="radio" name="role" value="user" checked>User
                             <input type="radio" name="role" value="staff">Staff
                             <input type="radio" name="role" value="admin">Admin
@@ -68,13 +72,13 @@
                     </div>
 
                     <div class="container-login100-form-btn" style="margin-top: 1rem;">
-                        <button class="login100-form-btn" type="submit">
+                        <button class="login100-form-btn" type="submit" style="font-size: large; background-color: #30398b; color:white;">
                             Register
                         </button>
                     </div>
 
                     <div class="text-center p-t-136" style="padding-top: 2rem;">
-                        <a class="txt2" href="login.php" style="text-decoration:none;color:black;">
+                        <a class="txt2" href="login.php" style="text-decoration:none;color:black; font-size:large;">
                             <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>Back to Login
                         </a>
                     </div>
