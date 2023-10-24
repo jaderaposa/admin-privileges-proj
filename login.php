@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/yep.css">
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bebas-neue" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/prata-regular" type="text/css"/>
 
     <style>
         .limiter {
@@ -63,21 +65,21 @@
         <div class="wrap-login100">
 
             <form class="login100-form validate-form" method="post" action="functions/login-logic.php">
-                <span class="login100-form-title" style="padding-bottom: 1rem;font-size:large;text-transform:uppercase;">
+                <span class="login100-form-title" style="padding-bottom: 1rem;font-size:xx-large;text-transform:uppercase;">
                     Login
                 </span>
 
                 <div class="wrap-input100 validate-input" style="margin-bottom: 0.5rem;" data-validate="Valid email/username is required: ex@abc.xyz or username">
                     <input class="input100" type="text" name="email_or_username" placeholder="Email or Username" value="<?php echo isset($_SESSION['previous_input']) ? $_SESSION['previous_input'] : ''; ?>">
                     <span class="focus-input100"></span>
-                    <span class="symbol-input100">
+                    <span class="symbol-input100" style="font-size: x-large;">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
                     <input class="input100" type="password" name="pass" id="password" placeholder="Password">
-                    <span class="eye-icon toggle-password">
+                    <span class="eye-icon toggle-password" style="font-size: x-large;">
                         <i class="fa fa-eye"></i>
                     </span>
                 </div>

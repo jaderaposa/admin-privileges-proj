@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/yep.css"> <!-- You can add this line for your custom CSS -->
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bebas-neue" type="text/css"/>
     <!-- =============================================================================================== -->
 </head>
 
@@ -22,14 +22,14 @@
 
 
                 <form class="login100-form validate-form" method="post" action="functions/signup-logic.php">
-                    <span class="login100-form-title" style="padding-bottom: 1rem;font-size:larger;">
+                    <span class="login100-form-title" style="padding-bottom: 1rem;">
                         Register Account
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid username is required" style="margin-bottom:0.5rem;">
                         <input class="input100" type="text" name="username" placeholder="Username" required>
                         <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                        <span class="symbol-input100" style="font-size: x-large;">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
                     </div>
@@ -37,14 +37,14 @@
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz" style="margin-bottom:0.5rem;">
                         <input class="input100" type="email" name="email" placeholder="Email" required>
                         <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                        <span class="symbol-input100" style="font-size: x-large;">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required" style="margin-bottom:0.5rem;">
                         <input class="input100" type="password" name="password" id="password" placeholder="Password" required>
-                        <span toggle="#password" class="eye-icon field-icon toggle-password">
+                        <span toggle="#password" class="eye-icon field-icon toggle-password" style="font-size: x-large;">
                             <i class="fa fa-eye"></i>
                         </span>
                     </div>
@@ -53,7 +53,7 @@
                     <div class="wrap-input100 validate-input" data-validate="Confirm Password is required">
                         <input class="input100" type="password" name="confirm_password" placeholder="Confirm Password" required>
                         <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                        <span class="symbol-input100" style="font-size: x-large;">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
